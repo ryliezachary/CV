@@ -10,9 +10,61 @@
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/tailwindcss@2.2.17/dist/tailwind.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	 <link rel="icon" href="images/favicon.png" type="image/gif" sizes="16x16">
+	 <style>
+		.carousel {
+		--carousel-button-color: #170724;
+		--carousel-button-bg: #fff;
+		--carousel-button-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%),
+		  0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+	  
+		--carousel-button-svg-width: 20px;
+		--carousel-button-svg-height: 20px;
+		--carousel-button-svg-stroke-width: 2.5;
+	  }
+	  
+	  .carousel .carousel__slide {
+		width: 30%;
+		padding: 10px;
+	  }
+	  
+	  .carousel .carousel__button.is-prev {
+		left: -1.5rem;
+	  }
+	  
+	  .carousel .carousel__button.is-next {
+		right: -1.5rem;
+	  }
+	  
+	  .carousel .carousel__button:focus {
+		outline: none;
+		box-shadow: 0 0 0 4px #A78BFA;
+	  }
+	  
+	  .fancybox__container {
+		--fancybox-bg: #fff;
+		--fancybox-color: #4B5563;
+	  
+		--carousel-button-width: 50px;
+		--carousel-button-height: 50px;
+		--carousel-button-bg: rgba(255, 255, 255, 0.9);
+	  
+		--carousel-button-svg-stroke-width: 1.8;
+		--carousel-button-svg-filter: none;
+	  }
+	  
+	  .fancybox__caption {
+		padding: 1rem 4rem 0 4rem;
+		font-size: 1rem;
+		line-height: 1.5rem;
+	  }
+	  </style>
+
 </head>
 <body>
 <div class="overlay"></div>
@@ -120,6 +172,94 @@
 </div>
 
 
+<div id="portfolio" class="section">
+	<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h1 class="mt-12 mb-8 px-6 text-center text-lg md:text-2xl font-semibold">
+				Some of the projects I've worked on
+			  </h1>
+			  
+			  <div id="myCarousel" class="carousel w-10/12 max-w-5xl mx-auto">
+				<div
+				  class="carousel__slide"
+				  data-src="images/portfolio_images/fekr.png"
+				  data-fancybox="gallery"
+				  data-caption="Fekr-TheKr. An arabic website which consists different teachings from Quran"
+				>
+				  <img
+					width="600"
+					height="400"
+					data-lazy-src="images/portfolio_images/fekr.png"
+				  />
+				</div>
+				<div
+				  class="carousel__slide"
+				  data-src="images/portfolio_images/iccb.png"
+				  data-fancybox="gallery"
+				  data-caption="Ilocos Consolidated Cooperative Bank"
+				>
+				  <img
+					width="600"
+					height="400"
+					data-lazy-src="images/portfolio_images/iccb.png"
+				  />
+				</div>
+				<div
+				  class="carousel__slide"
+				  data-src="images/portfolio_images/jobsaustralia.png"
+				  data-fancybox="gallery"
+				  data-caption="Website for jobseekers and companies looking for personnels."
+				>
+				  <img
+					width="600"
+					height="400"
+					data-lazy-src="images/portfolio_images/jobsaustralia.png"
+				  />
+				</div>
+				<div
+				  class="carousel__slide"
+				  data-src="images/portfolio_images/medixopinion.png"
+				  data-fancybox="gallery"
+				  data-caption="Medix Opinion. A website for medical especially for radiologists."
+				>
+				  <img
+					width="600"
+					height="400"
+					data-lazy-src="images/portfolio_images/medixopinion.png"
+				  />
+				</div>
+				<div
+				  class="carousel__slide"
+				  data-src="images/portfolio_images/qualitycenter.png"
+				  data-fancybox="gallery"
+				  data-caption="Quality Center. A web application to score/grade agents in Transcom."
+				>
+				  <img
+					width="600"
+					height="400"
+					data-lazy-src="images/portfolio_images/qualitycenter.png"
+				  />
+				</div>
+				<div
+				  class="carousel__slide"
+				  data-src="images/portfolio_images/tandim.png"
+				  data-fancybox="gallery"
+				  data-caption="Tandim. A web application written in ASP classic which consists customized dynamic forms."
+				>
+				  <img
+					width="600"
+					height="400"
+					data-lazy-src="images/portfolio_images/tandim.png"
+				  />
+				</div>
+		
+			  </div>
+		</div>
+	</div>
+</div>
+</div>
+
 <div id="about" class="section">
 	<div class="container">
 	<div class="row">
@@ -128,6 +268,7 @@
 	</div>
 	</div>
 </div>
+
 
 <script src="js/jquery.superslides.min.js"></script>
 <script src="js/typed.min.js"></script>
@@ -138,5 +279,32 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+<script type="text/javascript">
+	// Initialise Carousel
+const myCarousel = new Carousel(document.querySelector("#myCarousel"), {
+  preload: 2,
+});
+
+// Customize Fancybox
+Fancybox.bind('[data-fancybox="gallery"]', {
+  Thumbs: false,
+  Toolbar: false,
+
+  closeButton: "top",
+
+  Carousel: {
+    Dots: true,
+    on: {
+      change: (that) => {
+        myCarousel.slideTo(myCarousel.findPageForSlide(that.page), {
+          friction: 0,
+        });
+      },
+    },
+  },
+});
+
+</script>
 </body>
 </html>
